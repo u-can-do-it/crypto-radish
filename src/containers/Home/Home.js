@@ -5,24 +5,30 @@ import axios from "../../axios";
 
 class Home extends Component {
   state = {
-    data: "",
+    coins: null,
+    global: null,
     loading: true
   };
 
   componentDidMount() {
     this.setState({ loading: true });
-    console.log("loading");
     axios
-      .get("tickers")
+      .get("tickers/")
       .then(resp => {
         console.log(resp);
         this.storeData(resp.data);
       })
-      .then(() => {
-        console.log("loading end");
-        this.setState({ loading: false });
-      })
       .catch(err => console.log(err));
+
+    axios
+      .get("global")
+      .then(resp => {
+        this.setState({ global: resp.data });
+        console.log(resp);
+      })
+      .then(() => {
+        this.setState({ loading: false });
+      });
   }
 
   storeData = dataArray => {
@@ -32,9 +38,10 @@ class Home extends Component {
       })
       .sort((a, b) => a.rank - b.rank);
 
-    this.setState({ data: sortedData });
+    this.setState({ coins: sortedData });
   };
 
+  componentDidUpdate() {}
   // addPriceData = (number = 10) => {
   //   const coins = JSON.parse(JSON.stringify(this.state.data));
 
@@ -55,18 +62,12 @@ class Home extends Component {
   // };
 
   render() {
-    let list = null;
-    if (this.loading) {
-      list = <p>loading</p>;
-    } else {
-      list = <CoinsList coins={this.state.data} dupa={this.state.loading} />;
+    let list = <p>loading</p>;
+    if (this.state.coins) {
+      list = <CoinsList coins={this.state.coins} global={this.state.global} />;
     }
 
-    return (
-      <Wrap>
-        <CoinsList coins={this.state.data} dupa={"dupa"} />
-      </Wrap>
-    );
+    return <Wrap>{list}</Wrap>;
   }
 }
 export default Home;
