@@ -6,14 +6,19 @@ const coinsList = props => {
 
   function setCoins() {
     const tab = [];
-    if (props.coins) {
-      for (let coin of props.coins) {
-        tab.push(coin);
-      }
-    } else {
-      return "loading";
-    }
-    return tab;
+    console.log(props.coin);
+    let asd = props.dupa;
+    console.log(asd);
+    // for (let coin of props.coins) {
+    //   const row = (
+    //     <tr>
+    //       <td>{coin.name}</td>
+    //     </tr>
+    //   );
+    //   tab.push(row);
+    // }
+
+    // return tab;
   }
 
   return (
@@ -29,7 +34,7 @@ const coinsList = props => {
             <th>Market cap</th>
           </tr>
         </thead>
-        {coins}
+        <tbody>{coins}</tbody>
       </table>
     </div>
   );

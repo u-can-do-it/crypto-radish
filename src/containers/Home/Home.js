@@ -11,17 +11,18 @@ class Home extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
-
+    console.log("loading");
     axios
       .get("tickers")
       .then(resp => {
         console.log(resp);
         this.storeData(resp.data);
       })
-      .then(() => console.log(this.state.data))
+      .then(() => {
+        console.log("loading end");
+        this.setState({ loading: false });
+      })
       .catch(err => console.log(err));
-
-    this.setState({ loading: false });
   }
 
   storeData = dataArray => {
@@ -54,9 +55,16 @@ class Home extends Component {
   // };
 
   render() {
+    let list = null;
+    if (this.loading) {
+      list = <p>loading</p>;
+    } else {
+      list = <CoinsList coins={this.state.data} dupa={this.state.loading} />;
+    }
+
     return (
       <Wrap>
-        <CoinsList coins={this.props.data} />
+        <CoinsList coins={this.state.data} dupa={"dupa"} />
       </Wrap>
     );
   }
