@@ -24,7 +24,7 @@ class Home extends Component {
       .get("global")
       .then(resp => {
         this.setState({ global: resp.data });
-        console.log(resp);
+        //  console.log(resp);
       })
       .then(() => {
         this.setState({ loading: false });
