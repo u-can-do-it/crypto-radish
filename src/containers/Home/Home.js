@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Wrap from "../../hoc/Wrapper/Wrapper";
-import CoinsList from "../../components/Lists/CoinsList/CoinsList";
+import CoinsTable from "../../components/Tables/CoinTable/CoinsTable";
 import axios from "../../axios";
 
 class Home extends Component {
@@ -63,8 +63,8 @@ class Home extends Component {
 
   render() {
     let list = <p>loading</p>;
-    if (this.state.coins) {
-      list = <CoinsList coins={this.state.coins} global={this.state.global} />;
+    if (this.state.coins && this.state.global) {
+      list = <CoinsTable coins={this.state.coins} global={this.state.global} />;
     }
 
     return <Wrap>{list}</Wrap>;

@@ -7,7 +7,6 @@ class Currency extends Component {
   };
 
   componentDidMount() {
-    //console.log(this.props);
     axios
       .get(`coins/${this.props.computedMatch.params.id}/markets`)
       .then(resp => this.setState({ markets: resp.data }))
