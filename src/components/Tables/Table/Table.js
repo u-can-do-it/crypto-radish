@@ -3,9 +3,9 @@ import style from "./Table.module.css";
 
 const table = props => {
   return (
-    <div className={style.table}>
-      <table>
-        <thead>{props.headers}</thead>
+    <div>
+      <table className={style.table}>
+        <thead className={style.header}>{props.headers}</thead>
         <tbody>{props.data}</tbody>
       </table>
     </div>
