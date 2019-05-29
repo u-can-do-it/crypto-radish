@@ -1,6 +1,5 @@
 import React from "react";
-import Table from "../Table/Table";
-import { Link } from "react-router-dom";
+import style from "../TableStyle.module.css";
 
 const coinMarkests = props => {
   const data = getData();
@@ -34,13 +33,17 @@ const coinMarkests = props => {
       tab.push(row);
       if (i === 100) {
         break;
-      } else {
-        i++;
       }
+      i++;
     }
     return tab;
   }
 
-  return <Table headers={headers} data={data} />;
+  return (
+    <table>
+      <thead>{headers}</thead>
+      <tbody>{data}</tbody>
+    </table>
+  );
 };
 export default coinMarkests;

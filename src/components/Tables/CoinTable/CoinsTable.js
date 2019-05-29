@@ -2,42 +2,29 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import SortButton from "../../UI/Buton/TableSortButton/TableSortButton";
-import style from "./CoinsTable.module.css";
+import style from "../TableStyle.module.css";
 
 const coinsTable = props => {
   const coins = setCoins();
   const headers = (
     <tr className={style.table__row}>
-      <th className={style.table__button} onClick={() => props.sort("rank")}>
+      <th className={style.table__button} onClick={()=>props.sort("rank")}>
         #
       </th>
-      <th>
-        <SortButton name={"Name"} sort={() => props.sort("name")} />
+      <th onClick={()=>props.sort("name")} >
+      Name
       </th>
-      <th>
-        <SortButton
-          name={"Price USD"}
-          sort={() => props.sort("quotes.USD.price")}
-        />
+      <th  onClick={()=> props.sort("quotes.USD.price")}>
+          Price USD
       </th>
-      <th>
-        <SortButton
-          name={"Price change"}
-          sort={() => props.sort("quotes.USD.percent_change_24h")}
-        />
+      <th  onClick={ ()=>props.sort("quotes.USD.percent_change_24h")}>
+          Price change
       </th>
-      <th>
-        <SortButton
-          name={"Volume M USD"}
-          sort={() => props.sort("quotes.USD.volume_24h")}
-        />
+      <th  onClick={()=>props.sort("quotes.USD.volume_24h")}>
+          Volume M USD     
       </th>
-
-      <th>
-        <SortButton
-          name={"Market cap M USD"}
-          sort={() => props.sort("quotes.USD.market_cap")}
-        />
+      <th onClick={()=>props.sort("quotes.USD.market_cap")}>
+          Market cap M USD    
       </th>
     </tr>
   );

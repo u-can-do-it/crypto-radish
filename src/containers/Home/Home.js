@@ -4,23 +4,6 @@ import CoinsTable from "../../components/Tables/CoinTable/CoinsTable";
 import axios from "../../axios";
 import sortData from "../../utils/SortData";
 
-const sorting = {
-  direction: {
-    asc: "ASC",
-    desc: "DESC"
-  },
-  by: {
-    rank: "coin.rank",
-    name: "coin.name",
-    price: "coin.quotes.USD.price",
-    volume_24h: "coin.quotes.USD.volume_24h",
-    market_cap: "coin.quotes.USD.market_cap"
-  }
-};
-const display = {
-  all: "ALL",
-  part: 100
-};
 class Home extends Component {
   state = {
     coins: null,
@@ -63,6 +46,8 @@ class Home extends Component {
   };
 
   sortHandler = sortBy => {
+    console.log("go");
+    console.log(sortBy);
     const arr = [...this.state.coins];
     let direction = true;
     if (this.state.sortBy === sortBy && this.state.orderASC === true) {
