@@ -4,18 +4,11 @@ import { Link } from "react-router-dom";
 import SortButton from "../../UI/Buton/TableSortButton/TableSortButton";
 import style from "./CoinsTable.module.css";
 
-const coinsTable =props => {
-
-  
-
-
- const coins = setCoins();
+const coinsTable = props => {
+  const coins = setCoins();
   const headers = (
     <tr className={style.table__row}>
-      <th
-        className={style.table__button}
-        onClick={() => props.sort("rank")}
-      >
+      <th className={style.table__button} onClick={() => props.sort("rank")}>
         #
       </th>
       <th>
@@ -48,9 +41,9 @@ const coinsTable =props => {
       </th>
     </tr>
   );
- function setCoins() {
+  function setCoins() {
     const tab = [];
-
+    let index = 0;
     for (let coin of props.coins) {
       const row = (
         <tr key={coin.id}>
@@ -61,23 +54,24 @@ const coinsTable =props => {
           <td>{coin.quotes.USD.price.toFixed(2)}</td>
           <td>{coin.quotes.USD.percent_change_24h}%</td>
           <td>{(coin.quotes.USD.volume_24h / 100000).toFixed(3)}</td>
-    
+
           <td>{(coin.quotes.USD.market_cap / 1000000).toFixed(2)}</td>
         </tr>
       );
+      index++;
       tab.push(row);
-      if (coin.rank === 100) {
+      if (props.toDisplay < index) {
         break;
       }
     }
     return tab;
   }
 
-    return (
-      <table >
-      <thead >{headers}</thead>
+  return (
+    <table>
+      <thead>{headers}</thead>
       <tbody>{coins}</tbody>
     </table>
-    );
-}
+  );
+};
 export default coinsTable;

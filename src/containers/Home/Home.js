@@ -66,14 +66,19 @@ class Home extends Component {
     const arr = [...this.state.coins];
     let direction = true;
     if (this.state.sortBy === sortBy && this.state.orderASC === true) {
+      arr.reverse();
+      this.setState({ coins: arr });
+
       direction = !this.state.orderASC;
+      this.setState({ orderASC: direction });
+      return;
+    } else {
+      const newData = sortData(arr, sortBy, direction);
+
+      this.setState({ sortBy: sortBy });
+      this.setState({ orderASC: direction });
+      this.setState({ coins: newData });
     }
-
-    const newData = sortData(arr, sortBy, direction);
-
-    this.setState({ sortBy: sortBy });
-    this.setState({ orderASC: direction });
-    this.setState({ coins: newData });
   };
 
   render() {
@@ -86,6 +91,7 @@ class Home extends Component {
           sort={this.sortHandler}
           direction={this.sortDirection}
           sortBy={this.sortBy}
+          toDisplay={this.state.coinDisplayNumber}
         />
       );
     }
