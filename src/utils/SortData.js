@@ -1,4 +1,4 @@
-const sortData = (arr, sortBy, sortDirection = "ASC") => {
+const sortData = (arr, sortBy, sortDirection) => {
   const tab = [...arr];
 
   function getNested(theObject, path, separator = ".") {
@@ -15,7 +15,7 @@ const sortData = (arr, sortBy, sortDirection = "ASC") => {
     }
   }
 
-  if (sortDirection === "DESC") {
+  if (sortDirection === false) {
     return tab.sort((a, b) => {
       if (getNested(a, sortBy) > getNested(b, sortBy)) {
         return -1;
@@ -25,7 +25,7 @@ const sortData = (arr, sortBy, sortDirection = "ASC") => {
       return 0;
     });
   }
-  if (sortDirection === "ASC") {
+  if (sortDirection === true) {
     return tab.sort((a, b) => {
       if (getNested(a, sortBy) > getNested(b, sortBy)) {
         return 1;

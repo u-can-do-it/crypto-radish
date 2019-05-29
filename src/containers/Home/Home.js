@@ -26,8 +26,8 @@ class Home extends Component {
     coins: null,
     global: null,
     loading: true,
-    sortBy: "coin.rank",
-    sortDirection: "ASC",
+    sortBy: "rank",
+    orderASC: true,
     coinDisplayNumber: 100
   };
 
@@ -64,34 +64,17 @@ class Home extends Component {
 
   sortHandler = sortBy => {
     const arr = [...this.state.coins];
-    const sortDirection = this.state.sortDirection === "ASC" ? "DESC" : "ASC";
-    const newData = sortData(arr, sortBy, sortDirection);
-    console.log(sortDirection);
+    let direction = true;
+    if (this.state.sortBy === sortBy && this.state.orderASC === true) {
+      direction = !this.state.orderASC;
+    }
+
+    const newData = sortData(arr, sortBy, direction);
+
     this.setState({ sortBy: sortBy });
-    this.setState({ sortDirection: sortDirection });
+    this.setState({ orderASC: direction });
     this.setState({ coins: newData });
-    // console.log(newData);
   };
-
-  componentDidUpdate() {}
-  // addPriceData = (number = 10) => {
-  //   const coins = JSON.parse(JSON.stringify(this.state.data));
-
-  //   for (let coin of coins) {
-  //     axios
-  //       .get(`coins/${coin.id}/markets`)
-  //       .then(resp => {
-  //         const pricing = resp.data.filter(resp.data.quotes.USD.volume_24h);
-  //         coin["pricing"] = resp.data;
-  //       })
-  //       .then(() => {})
-  //       .catch(err => console.log(err));
-  //     if (coin.rank === number) {
-  //       break;
-  //     }
-  //   }
-  //   this.setState({ data: coins });
-  // };
 
   render() {
     let list = <p>loading</p>;
