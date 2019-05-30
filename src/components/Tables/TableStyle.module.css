@@ -1,0 +1,44 @@
+.table {
+  width: 80%;
+  margin: 0 auto;
+}
+th {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  transform: all 0.2s;
+}
+th:hover {
+  cursor: pointer;
+}
+tr {
+  transition: all 0.2s;
+}
+tr:hover {
+  background-color: #8080800a;
+}
+.sortASC {
+  border-bottom: 5px solid royalblue;
+}
+.sortDESC {
+  border-top: 5px solid royalblue;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0 1rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.td_link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.td_link:hover {
+  color: #333333;
+}

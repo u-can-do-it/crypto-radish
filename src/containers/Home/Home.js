@@ -3,6 +3,8 @@ import Wrap from "../../hoc/Wrapper/Wrapper";
 import CoinsTable from "../../components/Tables/CoinTable/CoinsTable";
 import axios from "../../axios";
 import sortData from "../../utils/SortData";
+import Loader from "../../components/UI/Loader/Loader";
+import TableTitle from "../../components/UI/TableTitle/TableTitle";
 
 class Home extends Component {
   state = {
@@ -46,8 +48,6 @@ class Home extends Component {
   };
 
   sortHandler = sortBy => {
-    console.log("go");
-    console.log(sortBy);
     const arr = [...this.state.coins];
     let direction = true;
     if (this.state.sortBy === sortBy && this.state.orderASC === true) {
@@ -67,21 +67,26 @@ class Home extends Component {
   };
 
   render() {
-    let list = <p>loading</p>;
+    let list = <Loader />;
     if (this.state.coins && this.state.global) {
       list = (
         <CoinsTable
           coins={this.state.coins}
           global={this.state.global}
           sort={this.sortHandler}
-          direction={this.sortDirection}
-          sortBy={this.sortBy}
+          direction={this.state.orderASC}
+          sortBy={this.state.sortBy}
           toDisplay={this.state.coinDisplayNumber}
         />
       );
     }
 
-    return <Wrap>{list}</Wrap>;
+    return (
+      <Wrap>
+        <TableTitle>Top 100 currencies</TableTitle>
+        {list}
+      </Wrap>
+    );
   }
 }
 export default Home;

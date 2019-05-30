@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  color: #655a56;
+  background-image: linear-gradient(to right bottom, #a7cfdf 0%, #23538a 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+:root {
+  --white: #ffffff;
+}
