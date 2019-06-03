@@ -1,11 +1,22 @@
 .nav {
+  width: 95%;
+  height: 6rem;
+  margin: 4rem auto 4rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #93c7dd 40%, #3a618d 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3rem;
+  box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.45);
 }
 .nav__link {
-  padding-left: 1rem;
+  margin-left: 1.4rem;
 }
 .navList {
+  max-width: 50%;
+  list-style-type: none;
   display: flex;
+  margin-right: 3rem;
 }

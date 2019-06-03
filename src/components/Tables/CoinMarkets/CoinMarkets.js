@@ -5,18 +5,54 @@ const coinMarkests = props => {
   const data = getData();
   const headers = (
     <tr>
-      <th>Exchange</th>
-      <th>Pair</th>
-      <th>Volume (24h) M$</th>
-      <th>Price $</th>
-      <th>Volume (%)</th>
-      <th>Updated</th>
+      <th
+        onClick={() => {
+          props.sort("exchange_name");
+        }}
+      >
+        Exchange
+      </th>
+      <th
+        onClick={() => {
+          props.sort("pair");
+        }}
+      >
+        Pair
+      </th>
+      <th
+        onClick={() => {
+          props.sort("quotes.USD.volume_24h");
+        }}
+      >
+        Volume (24h) M$
+      </th>
+      <th
+        onClick={() => {
+          props.sort("quotes.USD.price");
+        }}
+      >
+        Price $
+      </th>
+      <th
+        onClick={() => {
+          props.sort("adjusted_volume_24h_share");
+        }}
+      >
+        Volume (%)
+      </th>
+      <th
+        onClick={() => {
+          props.sort("exchange_name");
+        }}
+      >
+        Updated
+      </th>
     </tr>
   );
   function getData() {
     const tab = [];
     let i = 0;
-    console.log(props.markets);
+
     for (let market of props.markets) {
       const row = (
         <tr key={`${market.exchange_id}_${market.pair}`}>

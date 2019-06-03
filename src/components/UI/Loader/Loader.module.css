@@ -1,10 +1,17 @@
 .loader {
   /* margin: 10rem 10rem 10rem 10rem; */
   position: relative;
-  margin: 0 auto;
+  margin: 15rem auto 0;
   height: 10rem;
-  width: 30rem;
+  width: 10rem;
+
   /* top: 40%; */
+}
+.loader__container {
+  margin-top: 8vh;
+  width: 80vw;
+  height: 60vh;
+  display: flex;
 }
 .loader div {
   display: inline-block;
