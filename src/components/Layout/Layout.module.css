@@ -1,6 +1,13 @@
 .layout {
-  margin: 0 auto;
-  max-width: max-content;
+  position: relative;
+  margin: 0 10% 0;
   border-radius: 1rem;
   background-color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    margin: 0 auto;
+    border-radius: 0px;
+  }
 }

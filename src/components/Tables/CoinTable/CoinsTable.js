@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ControlPanel from "../../UI/TableControl/ControlPanel";
 
 import style from "../TableStyle.module.css";
 
@@ -12,7 +13,7 @@ const coinsTable = props => {
     }
   };
   const headers = (
-    <tr className={style.table__row}>
+    <tr>
       <th className={getSortClass("rank")} onClick={() => props.sort("rank")}>
         #
       </th>
@@ -47,12 +48,15 @@ const coinsTable = props => {
   );
   function setCoins() {
     const tab = [];
-    let index = props.startIndex;
-    const stopIndex = props.startIndex + props.toDisplay;
+
+    let stopIndex = props.startIndex + props.toDisplay;
+    if (stopIndex >= props.coins.length) {
+      stopIndex = props.coins.length - 1;
+    }
     for (let i = props.startIndex; i < stopIndex; i++) {
       const coin = props.coins[i];
       const row = (
-        <tr key={coin.id}>
+        <tr key={coin.id} className={style.table__row}>
           <td>{coin.rank}</td>
           <td>
             <Link className={style.td_link} to={`currency/${coin.id}`}>
@@ -66,20 +70,20 @@ const coinsTable = props => {
           <td>{(coin.quotes.USD.market_cap / 1000000).toFixed(2)}</td>
         </tr>
       );
-      index++;
+
       tab.push(row);
-      // if (props.toDisplay === index) {
-      //   break;
-      // }
     }
     return tab;
   }
 
   return (
-    <table className={style.table}>
-      <thead>{headers}</thead>
-      <tbody>{coins}</tbody>
-    </table>
+    <div className={style.tableBox}>
+      <ControlPanel control={props.control} startIndex={props.startIndex} />
+      <table className={style.table}>
+        <thead>{headers}</thead>
+        <tbody>{coins}</tbody>
+      </table>
+    </div>
   );
 };
 export default coinsTable;

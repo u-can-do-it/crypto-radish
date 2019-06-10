@@ -1,6 +1,13 @@
-.table {
-  width: 80%;
+.tableBox {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
   margin: 0 auto;
+}
+.table {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 2rem;
 }
 th {
   text-decoration: none;
@@ -13,9 +20,14 @@ th:hover {
 }
 tr {
   transition: all 0.2s;
+  width: 100%;
+  border: 2px solid transparent;
 }
-tr:hover {
-  background-color: #8080800a;
+.table__row:hover {
+  border: 2px solid royalblue;
+}
+.table__row {
+  border: 2px solid royalblue;
 }
 .sortASC {
   border-bottom: 5px solid royalblue;
@@ -26,11 +38,11 @@ tr:hover {
 
 th,
 td {
-  border-bottom: 1px solid #ddd;
-  padding: 0 1rem;
   height: 4rem;
   font-size: 1.5rem;
   text-align: left;
+  border-collapse: collapse;
+  border-bottom: 1px solid #ddd;
 }
 
 .td_link {

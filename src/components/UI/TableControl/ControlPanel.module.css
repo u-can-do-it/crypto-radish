@@ -1,0 +1,13 @@
+.controlPanel {
+  border-radius: 2rem;
+  border: 1px solid black;
+  overflow: hidden;
+  width: max-content;
+  float: right;
+  margin-right: 4rem;
+}
+@media (max-width: 700px) {
+  .controlPanel {
+    margin-right: 0;
+  }
+}

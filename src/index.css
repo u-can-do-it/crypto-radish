@@ -28,7 +28,6 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   padding: 0;
-
   background-image: linear-gradient(to right bottom, #a7cfdf 0%, #23538a 100%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,4 +38,9 @@ a {
 }
 :root {
   --white: #ffffff;
+}
+@media (max-width: 900px) {
+  body {
+    background-image: none;
+  }
 }

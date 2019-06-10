@@ -5,7 +5,7 @@ import axios from "../../axios";
 import sortData from "../../utils/SortData";
 import Loader from "../../components/UI/Loader/Loader";
 import TableTitle from "../../components/UI/TableTitle/TableTitle";
-import ControlPanel from "../../components/UI/TableControl/ControlPanel";
+import * as controlTypes from "../../components/UI/TableControl/ControlTypes";
 
 class Home extends Component {
   state = {
@@ -67,25 +67,35 @@ class Home extends Component {
       this.setState({ coins: newData });
     }
   };
-  loadNextData(pressedButton) {
+  loadNextData = pressedButton => {
+    let index = 0;
+    if (this.state.coinDisplayNumber === this.state.coins.length - 1) {
+      return;
+    }
+
     switch (pressedButton) {
-      case "NEXT":
-        let index =
-          this.state.coinDisplayStartIndex + this.state.coinDisplayNumber;
+      case controlTypes.NEXT:
+        index = this.state.coinDisplayStartIndex + this.state.coinDisplayNumber;
+        if (index >= this.state.coins.length) {
+          return;
+        }
         this.setState({ coinDisplayStartIndex: index });
         break;
-      case "PREV":
+      case controlTypes.PREV:
         index = this.state.coinDisplayStartIndex - this.state.coinDisplayNumber;
+        if (index < 0) {
+          return;
+        }
         this.setState({ coinDisplayStartIndex: index });
         break;
-      case "ALL":
+      case controlTypes.ALL:
         this.setState({ coinDisplayNumber: this.state.coins.length - 1 });
         break;
       default:
         throw new Error("Invalid property value only: NEXT / PREV / ALL");
     }
-  }
-  ViewControl = React.createContext();
+  };
+
   render() {
     let list = <Loader />;
     if (this.state.coins && this.state.global) {
@@ -98,15 +108,15 @@ class Home extends Component {
           sortBy={this.state.sortBy}
           toDisplay={this.state.coinDisplayNumber}
           startIndex={this.state.coinDisplayStartIndex}
+          control={this.loadNextData}
         />
       );
     }
 
     return (
       <Wrap>
-        <ViewControl />
-        <ControlPanel />
         <TableTitle>Top 100 currencies</TableTitle>
+
         {list}
       </Wrap>
     );

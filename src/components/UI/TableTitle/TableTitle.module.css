@@ -1,8 +1,9 @@
 .title {
+  width: 100%;
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   border-radius: 25%;
   text-transform: uppercase;
 }

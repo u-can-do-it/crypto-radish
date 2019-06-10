@@ -1,0 +1,14 @@
+.control__button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.control__button:hover {
+  background: royalblue;
+}
+.control__buttonCenter {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}

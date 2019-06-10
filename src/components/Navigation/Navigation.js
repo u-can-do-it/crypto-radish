@@ -25,6 +25,7 @@ const navigation = props => {
   return (
     <nav className={style.nav}>
       <Logo />
+
       <ul className={style.navList}>{navLinks}</ul>
     </nav>
   );
