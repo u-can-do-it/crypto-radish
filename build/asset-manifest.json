@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/u-can-do-it/crypto-radish/static/css/main.a7de24b1.chunk.css",
+    "main.js": "/u-can-do-it/crypto-radish/static/js/main.6e071540.chunk.js",
+    "main.js.map": "/u-can-do-it/crypto-radish/static/js/main.6e071540.chunk.js.map",
+    "runtime~main.js": "/u-can-do-it/crypto-radish/static/js/runtime~main.f7737293.js",
+    "runtime~main.js.map": "/u-can-do-it/crypto-radish/static/js/runtime~main.f7737293.js.map",
+    "static/js/2.55180c1e.chunk.js": "/u-can-do-it/crypto-radish/static/js/2.55180c1e.chunk.js",
+    "static/js/2.55180c1e.chunk.js.map": "/u-can-do-it/crypto-radish/static/js/2.55180c1e.chunk.js.map",
+    "index.html": "/u-can-do-it/crypto-radish/index.html",
+    "precache-manifest.54ce417b10c523b23b73058ab6d57d4c.js": "/u-can-do-it/crypto-radish/precache-manifest.54ce417b10c523b23b73058ab6d57d4c.js",
+    "service-worker.js": "/u-can-do-it/crypto-radish/service-worker.js",
+    "static/css/main.a7de24b1.chunk.css.map": "/u-can-do-it/crypto-radish/static/css/main.a7de24b1.chunk.css.map"
+  }
+}
