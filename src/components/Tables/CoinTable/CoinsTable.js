@@ -24,25 +24,25 @@ const coinsTable = props => {
         className={getSortClass("quotes.USD.price")}
         onClick={() => props.sort("quotes.USD.price")}
       >
-        Price USD
+        Price [USD]
       </th>
       <th
         className={getSortClass("quotes.USD.percent_change_24h")}
         onClick={() => props.sort("quotes.USD.percent_change_24h")}
       >
-        Price change
+        Price change [%]
       </th>
       <th
         className={getSortClass("quotes.USD.volume_24h")}
         onClick={() => props.sort("quotes.USD.volume_24h")}
       >
-        Volume M USD
+        Volume [M USD]
       </th>
       <th
         className={getSortClass("quotes.USD.market_cap")}
         onClick={() => props.sort("quotes.USD.market_cap")}
       >
-        Market cap M USD
+        Market cap [M USD]
       </th>
     </tr>
   );

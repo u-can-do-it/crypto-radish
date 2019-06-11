@@ -33,7 +33,7 @@ const coinMarkests = props => {
           props.sort("quotes.USD.volume_24h");
         }}
       >
-        Volume [24h] M$
+        Volume 24h [M USD]
       </th>
       <th
         className={getSortClass("quotes.USD.price")}
