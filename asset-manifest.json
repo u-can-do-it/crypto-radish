@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/crypto-radish/static/css/main.c63fd464.chunk.css",
-    "main.js": "/crypto-radish/static/js/main.2aa0766b.chunk.js",
-    "main.js.map": "/crypto-radish/static/js/main.2aa0766b.chunk.js.map",
+    "main.js": "/crypto-radish/static/js/main.b6b53f7b.chunk.js",
+    "main.js.map": "/crypto-radish/static/js/main.b6b53f7b.chunk.js.map",
     "runtime~main.js": "/crypto-radish/static/js/runtime~main.1ede54b8.js",
     "runtime~main.js.map": "/crypto-radish/static/js/runtime~main.1ede54b8.js.map",
     "static/js/2.173d3662.chunk.js": "/crypto-radish/static/js/2.173d3662.chunk.js",
     "static/js/2.173d3662.chunk.js.map": "/crypto-radish/static/js/2.173d3662.chunk.js.map",
     "index.html": "/crypto-radish/index.html",
-    "precache-manifest.b9ee0c6a3ed41c59ba64837017e4b296.js": "/crypto-radish/precache-manifest.b9ee0c6a3ed41c59ba64837017e4b296.js",
+    "precache-manifest.2df171ce09b8c835cfc02f1246d02f6a.js": "/crypto-radish/precache-manifest.2df171ce09b8c835cfc02f1246d02f6a.js",
     "service-worker.js": "/crypto-radish/service-worker.js",
     "static/css/main.c63fd464.chunk.css.map": "/crypto-radish/static/css/main.c63fd464.chunk.css.map",
     "static/media/radish.svg": "/crypto-radish/static/media/radish.6bf5095f.svg",
