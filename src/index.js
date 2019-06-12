@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./utils/ScrollToTop";
 
 const app = (
-  <BrowserRouter>
+  <BrowserRouter basename={"/crypto-radish"}>
     <ScrollToTop>
       <App />
     </ScrollToTop>
