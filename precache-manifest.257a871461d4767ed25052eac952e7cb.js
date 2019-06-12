@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9d0fb9a5a54e6d0017a59388b8427f56",
+    "revision": "1e0a2774b47f70115ab01d6e3291e174",
     "url": "/crypto-radish/index.html"
   },
   {
-    "revision": "6d66555f34cd8f7c7bc5",
-    "url": "/crypto-radish/static/css/main.c63fd464.chunk.css"
+    "revision": "fec27dd77708fb6b4183",
+    "url": "/crypto-radish/static/css/main.b195e061.chunk.css"
   },
   {
     "revision": "e64283635ef5a1e62ff6",
     "url": "/crypto-radish/static/js/2.173d3662.chunk.js"
   },
   {
-    "revision": "6d66555f34cd8f7c7bc5",
+    "revision": "fec27dd77708fb6b4183",
     "url": "/crypto-radish/static/js/main.ec6808d3.chunk.js"
   },
   {
