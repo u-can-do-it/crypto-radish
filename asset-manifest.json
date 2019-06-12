@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c63fd464.chunk.css",
-    "main.js": "/static/js/main.75377628.chunk.js",
-    "main.js.map": "/static/js/main.75377628.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.173d3662.chunk.js": "/static/js/2.173d3662.chunk.js",
-    "static/js/2.173d3662.chunk.js.map": "/static/js/2.173d3662.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.fcff79c3d85406ac3928b72680b5afca.js": "/precache-manifest.fcff79c3d85406ac3928b72680b5afca.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c63fd464.chunk.css.map": "/static/css/main.c63fd464.chunk.css.map",
-    "static/media/radish.svg": "/static/media/radish.6bf5095f.svg",
-    "static/media/working_doge.gif": "/static/media/working_doge.09730b0e.gif"
+    "main.css": "/crypto-radish/static/css/main.c63fd464.chunk.css",
+    "main.js": "/crypto-radish/static/js/main.2aa0766b.chunk.js",
+    "main.js.map": "/crypto-radish/static/js/main.2aa0766b.chunk.js.map",
+    "runtime~main.js": "/crypto-radish/static/js/runtime~main.1ede54b8.js",
+    "runtime~main.js.map": "/crypto-radish/static/js/runtime~main.1ede54b8.js.map",
+    "static/js/2.173d3662.chunk.js": "/crypto-radish/static/js/2.173d3662.chunk.js",
+    "static/js/2.173d3662.chunk.js.map": "/crypto-radish/static/js/2.173d3662.chunk.js.map",
+    "index.html": "/crypto-radish/index.html",
+    "precache-manifest.b9ee0c6a3ed41c59ba64837017e4b296.js": "/crypto-radish/precache-manifest.b9ee0c6a3ed41c59ba64837017e4b296.js",
+    "service-worker.js": "/crypto-radish/service-worker.js",
+    "static/css/main.c63fd464.chunk.css.map": "/crypto-radish/static/css/main.c63fd464.chunk.css.map",
+    "static/media/radish.svg": "/crypto-radish/static/media/radish.6bf5095f.svg",
+    "static/media/working_doge.gif": "/crypto-radish/static/media/working_doge.09730b0e.gif"
   }
 }
