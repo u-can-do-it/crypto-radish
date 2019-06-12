@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/u-can-do-it/crypto-radish/static/css/main.c63fd464.chunk.css",
-    "main.js": "/u-can-do-it/crypto-radish/static/js/main.043e0c07.chunk.js",
-    "main.js.map": "/u-can-do-it/crypto-radish/static/js/main.043e0c07.chunk.js.map",
-    "runtime~main.js": "/u-can-do-it/crypto-radish/static/js/runtime~main.f7737293.js",
-    "runtime~main.js.map": "/u-can-do-it/crypto-radish/static/js/runtime~main.f7737293.js.map",
-    "static/js/2.173d3662.chunk.js": "/u-can-do-it/crypto-radish/static/js/2.173d3662.chunk.js",
-    "static/js/2.173d3662.chunk.js.map": "/u-can-do-it/crypto-radish/static/js/2.173d3662.chunk.js.map",
-    "index.html": "/u-can-do-it/crypto-radish/index.html",
-    "precache-manifest.bcd72ee9e01cdd70763699f14b0fa0fb.js": "/u-can-do-it/crypto-radish/precache-manifest.bcd72ee9e01cdd70763699f14b0fa0fb.js",
-    "service-worker.js": "/u-can-do-it/crypto-radish/service-worker.js",
-    "static/css/main.c63fd464.chunk.css.map": "/u-can-do-it/crypto-radish/static/css/main.c63fd464.chunk.css.map",
-    "static/media/radish.svg": "/u-can-do-it/crypto-radish/static/media/radish.6bf5095f.svg",
-    "static/media/working_doge.gif": "/u-can-do-it/crypto-radish/static/media/working_doge.09730b0e.gif"
+    "main.css": "/static/css/main.c63fd464.chunk.css",
+    "main.js": "/static/js/main.75377628.chunk.js",
+    "main.js.map": "/static/js/main.75377628.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.173d3662.chunk.js": "/static/js/2.173d3662.chunk.js",
+    "static/js/2.173d3662.chunk.js.map": "/static/js/2.173d3662.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0767e5a391370a79df0f3f9efce94f48.js": "/precache-manifest.0767e5a391370a79df0f3f9efce94f48.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c63fd464.chunk.css.map": "/static/css/main.c63fd464.chunk.css.map",
+    "static/media/radish.svg": "/static/media/radish.6bf5095f.svg",
+    "static/media/working_doge.gif": "/static/media/working_doge.09730b0e.gif"
   }
 }
