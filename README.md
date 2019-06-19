@@ -1,3 +1,21 @@
+The application allows checking average prices of cryptocurrencies and price of a chosen currency in every available exchange.
+
+Used technologies: React, JavaScript, CSS, Axios, React-Router.
+
+[Preview](https://u-can-do-it.github.io/crypto-radish/)
+
+
+![app social preview](https://repository-images.githubusercontent.com/191414546/d8bee800-9211-11e9-9bde-decacde5c56a)
+***
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
