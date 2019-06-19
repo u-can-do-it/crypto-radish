@@ -35,7 +35,7 @@ const sortData = (arr, sortBy, sortDirection) => {
       return 0;
     });
   }
-  console.log(tab);
+
   return tab;
 };
 export default sortData;
